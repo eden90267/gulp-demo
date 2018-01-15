@@ -1,0 +1,16 @@
+
+.box {
+  height: 100px;
+  width: 100px;
+}
+
+// .box:hover {
+//   background-color: theme-color-level("hex", -3);
+// }
+
+@each $color, $value in $theme-colors {
+  .box-#{$color} {
+    background-color: $value;
+    color: color-yiq($value);
+  }
+}
